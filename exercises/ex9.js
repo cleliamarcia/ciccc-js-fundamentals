@@ -1,5 +1,6 @@
 /*
-NASA's countdown to launch includes checkpoints where NASA engineers complete certain technical tasks. During the final minute, NASA has 6 tasks to complete:
+NASA's countdown to launch includes checkpoints where NASA engineers complete certain technical tasks. 
+During the final minute, NASA has 6 tasks to complete:
 
 Orbiter transfers from ground to internal power (T-50 seconds)
 Ground launch sequencer is go for auto sequence start (T-31 seconds)
@@ -31,3 +32,32 @@ T-2 seconds
 T-1 seconds
 Solid rocket booster ignition and liftoff!
 */
+
+let seconds = 60;
+while (seconds >= 0){
+    switch (seconds)
+    {
+        case 51: 
+            console.log("T-51 seconds - Orbiter transfers from ground to internal power");
+            break;
+        case 31:
+            console.log("T-31 seconds - Ground launch sequencer is go for auto sequence start");
+             break;
+        case 16:
+             console.log("T-16 seconds - Activate launch pad sound suppression system ");
+             break;
+        case 10:
+             console.log("T-10 seconds -  Activate main engine hydrogen burnoff system ");
+             break;
+        case 6:
+             console.log(" T-6 seconds -  Main engine start");
+             break;
+        case 0:
+             console.log("T-0 seconds - Solid rocket booster ignition and liftoff!");
+             break;
+        default:
+            console.log("T-"+seconds+" seconds") ;
+    }
+
+    seconds--;
+}

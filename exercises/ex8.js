@@ -1,5 +1,6 @@
 /*
-"Fizzbuzz" is a famous interview question used in programming interviews. It goes something like this:
+"Fizzbuzz" is a famous interview question used in programming interviews. 
+It goes something like this:
 
 Loop through the numbers 1 to 100
 If the number is divisible by 3, print "Fizz"
@@ -14,9 +15,32 @@ You can check if a number is divisible by another number by checking if x % y ==
 */
 
 var x = 1;
-
-while (/* your stop condition goes here */) {
+let result = "";
+while (x <= 100) {
     // check divisibility
+    if (x % 3 == 0)
+    {
+        result = "Fizz";
+        
+    }
+    if (x % 5 == 0)
+    {
+        result = result + "Buzz";
+    }
+    
+    
     // print Julia, James, or JuliaJames
+
+    if (result =="")
+    {
+        console.log(x);
+    }
+
+    else{
+        console.log(result);
+        result = "";
+    };
+
     // increment x
+    x++;
 }

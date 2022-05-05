@@ -1,7 +1,10 @@
 /*
-A murder mystery is a game typically played at parties wherein one of the partygoers is secretly, and unknowingly, playing a murderer, and the other attendees must determine who among them is the criminal. It's a classic case of whodunnit.
+A murder mystery is a game typically played at parties wherein one of the partygoers is secretly, 
+and unknowingly, playing a murderer, and the other attendees must determine who among them is the criminal. 
+It's a classic case of whodunnit.
 
-Since this might be your first time playing a murder mystery, we've simplified things quite a bit to make it easier. 
+Since this might be your first time playing a murder mystery, we've simplified things quite a bit to make 
+it easier. 
 Here's what we know! In this murder mystery there are:
 
 four rooms: the ballroom, gallery, billiards room, and dining room,
@@ -29,7 +32,42 @@ Afterwards, use this template to print a message to the console if the mystery w
 
 __________ did it in the __________ with the __________!
 
-What goes into the three blank spaces? You can fill in the blanks with the name of the suspect, the room, and the weapon! For example, an output string may look like:
+What goes into the three blank spaces? You can fill in the blanks with the name of the suspect, the room,
+ and the weapon! For example, an output string may look like:
 
 Mr. Parkes did it in the dining room with the knife!
 */
+
+const suspect = "Mr. Parkes";
+const room = "dinning room";
+let weapon = "";
+let solved = false;
+
+if(room === "ballroom"){
+    weapon = "poison";
+    if(suspect === "Mr. Kalehoff"){
+        solved = true;
+    }
+} else if (room === "gallery"){
+    weapon = "trophy";
+    if(suspect === "Ms. Van Cleve"){
+        solved = true;
+    }
+} else if(room === "billiards room"){
+    weapon = "pool stick";
+    if(suspect === "Mrs. Sparr"){
+        solved = true;
+    }
+} else if(room === "dining room"){
+    weapon = "knife";
+    if(suspect === "Mr. Parkes"){
+        solved = true;
+    }
+}
+
+
+if (solved){
+    console.log(suspect + " did it in the " + room + " with the " + weapon);
+} else {
+    console.log("Mystery not solved.");
+}

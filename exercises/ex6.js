@@ -15,3 +15,14 @@ Use the eatsPlants and eatsAnimals variables to test your code.
 
 If eatsPlants equals true and eatsAnimals equals false, then herbivore should be printed to the console. 
 */
+
+let eatsPlants = false;
+let eatsAnimals = false;
+
+let vresult
+
+vresult= eatsPlants && !eatsAnimals? "herbivore" : 
+        !eatsPlants && eatsAnimals ? "carnivore" : 
+        eatsPlants && eatsAnimals ? "omnivore" : "undefined";
+
+console.log(vresult);
